@@ -1,0 +1,21 @@
+Pasos para configurar llaves SSH en local.
+- Crear una llave privada y una llave pública en local.
+- Una vez creadas las llaves, se envía la llave pública al repositorio en GitHub.
+- Todo esto se conecta con un protocolo nuevo llamado SSH, en vez de HTTPS.
+
+- Las llaves se recomiendan crear en el directorio Home de la computadora.
+- El comando para crear la llave es: ssh-keygen -t rsa -b 4096 -C "moris_juan@hotmail.com"
+
+passphrase --> contraseña (opcional pero recomendado) adicional de texto que se le pone a llave pública y privada.
+
+- Revisar que el servidor de llaves esté prendido: eval $(ssh-agent -s)
+- Agregar la llave en el servidor --> ssh-add ~/.ssh/id-rsa
+
+Pasos para realizar la conexión SSH a GitHub
+- Copiar lo que hay dentro del archivo id_rsa.pub y pegarlo en nuestro perfil de GitHub en la 
+opción de Settings SSH and GPG Keys.
+- Luego debemos cambiar la url del repositorio.
+Para saber cual es la url del respositorio utilizar el comando git remote -v
+- El comando para cambiar la url es: git remote set-url origin git@github.com:ciclonteam1912/hyperblog.git
+
+
