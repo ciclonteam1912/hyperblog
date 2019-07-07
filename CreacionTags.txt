@@ -1,0 +1,7 @@
+- git tag -a v0.1 -m "Creacion de nuevo tag" 9149154 --> comando para crear un nuevo tag
+- git tag --> Comando para listar todos los tags
+- git show-ref --tags --> Comando para saber los commits asignado a un determinado tag.
+- git push origin --tags --> Comando para enviar los tags creados en local al repositorio remoto.
+- git tag -d [nombre_del_tag] --> Comando para eliminar el tag en local.
+- git push origin :refs/tags/[nombre_del_tag] --> Comando para eliminar el tag en el repositorio remoto, 
+luego de eliminar el tag en local (Le envia la referencia del tag elminado en local).
